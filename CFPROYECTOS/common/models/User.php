@@ -68,11 +68,7 @@ class User extends ActiveRecord implements IdentityInterface
      * {@inheritdoc}
      */
     public static function findIdentityByAccessToken($token, $type = null) {
-<<<<<<< HEAD:CFPROYECTOS/common/models/User.php
         return static::findOne(['auth_key' => $token, 'status' => self::STATUS_ACTIVE]);
-=======
-        throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');
->>>>>>> 77890b5568d4447c747dad038d872ff209dbd1ec:cfproyecto/common/models/User.php
     }
 
     /**
