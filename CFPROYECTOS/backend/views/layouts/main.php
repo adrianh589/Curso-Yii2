@@ -41,7 +41,12 @@ AppAsset::register($this);
         ['label' => Yii::t('app','Actividades'), 'url' => ['/actividades/index']],
         ['label' => Yii::t('app','Bitacora de tiempos'), 'url' => ['/bitacoratiempos/index']],
         ['label' => Yii::t('app','Graficas'), 'url' => ['/graficas/index']],
+<<<<<<< HEAD
         ['label' => Yii::t('app','Subir Archivo'), 'url' => ['/site/upload']]
+=======
+        ['label' => Yii::t('app','Subir Archivo'), 'url' => ['/site/upload']],
+        ['label' => Yii::t('app','Graficas'), 'url' => ['/graficas/index']],
+>>>>>>> 77890b5568d4447c747dad038d872ff209dbd1ec
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];

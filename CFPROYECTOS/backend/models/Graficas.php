@@ -27,6 +27,7 @@ class Graficas{
         $cadenaSql = $cadenaSelect . $cadenaSql . " order by p.idProyecto";
         $rows = $this->getDb()->createCommand($cadenaSql)->queryAll();
         $series = array();
+<<<<<<< HEAD
         foreach ($rows as $row) {
             $serie = array();
             $serie['name'] = $row['NombreProyecto'];
@@ -36,6 +37,17 @@ class Graficas{
                 $suma += $row["f" . $i];
             }
             if ($suma > 0)
+=======
+        foreach ($rows as $row){
+            $serie = array();
+            $serie['name'] = $row['NombreProyecto'];
+            $suma = 0;
+            for ($i = 0; $i < $numDias; $i++){
+                $serie['data'][] = floatval($row["f".$i]);
+                $suma += $row["f".$i];
+            }
+            if($suma > 0)
+>>>>>>> 77890b5568d4447c747dad038d872ff209dbd1ec
                 array_push($series, $serie);
         }
         return $series;

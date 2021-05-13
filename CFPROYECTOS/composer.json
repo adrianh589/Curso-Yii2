@@ -21,7 +21,11 @@
         "yiisoft/yii2-jui": "^2.0",
         "kartik-v/yii2-widget-timepicker": "*",
         "kartik-v/yii2-widget-select2": "@dev",
+<<<<<<< HEAD:CFPROYECTOS/composer.json
         "miloschuman/yii2-highcharts-widget": "dev-master",
+=======
+        "miloschuman/yii2-highcharts-widget": "^9.0",
+>>>>>>> 77890b5568d4447c747dad038d872ff209dbd1ec:cfproyecto/composer.json
         "2amigos/yii2-file-upload-widget": "~1.0",
         "2amigos/yii2-file-input-widget": "~1.0",
         "phpoffice/phpexcel": "^1.8"

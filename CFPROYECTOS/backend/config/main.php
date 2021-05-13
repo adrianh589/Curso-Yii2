@@ -37,7 +37,12 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+<<<<<<< HEAD:CFPROYECTOS/backend/config/main.php
         'urlManager' => ['enablePrettyUrl' => true,
+=======
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+>>>>>>> 77890b5568d4447c747dad038d872ff209dbd1ec:cfproyecto/backend/config/main.php
             'showScriptName' => true,
             'rules' => [
                 [
