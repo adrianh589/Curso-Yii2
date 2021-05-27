@@ -50,7 +50,6 @@ class Bitacoratiempos extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
-<<<<<<< HEAD
     public function attributeLabels() {
         return [
             'idBitacoraTiempo' => Yii::t('app', 'Id Bitacora Tiempo'),
@@ -64,7 +63,6 @@ class Bitacoratiempos extends \yii\db\ActiveRecord
             'idProyecto' => Yii::t('app', 'Proyecto'),
             'Artefacto' => Yii::t('app', 'Artefacto'),
             'idUsuario' => Yii::t('app', 'Id Usuario'),
-=======
     public function attributeLabels()
     {
         return [
@@ -79,7 +77,6 @@ class Bitacoratiempos extends \yii\db\ActiveRecord
             'idProyecto' => 'Id Proyecto',
             'Artefacto' => 'Artefacto',
             'idUsuario' => 'Id Usuario',
->>>>>>> 77890b5568d4447c747dad038d872ff209dbd1ec
         ];
     }
 
@@ -98,16 +95,13 @@ class Bitacoratiempos extends \yii\db\ActiveRecord
         parent::beforeSave($insert);
         $fechaHoraInicio = date_create_from_format('h:i a', $this->HoraInicio);
         $fechaHoraFinal = date_create_from_format('h:i a', $this->HoraFinal);
-<<<<<<< HEAD
         $fechaHoraInt = date_create_from_format('h:i:s', $this->Interrupcion);
         $interval = date_diff($fechaHoraFinal, $fechaHoraInicio);
         $this->Total = ( ($interval->h * 60 + $interval->i) - ( $fechaHoraInt->format('i') ) ) / 60.0;
-=======
         $fechaHoraInt = date_create_from_format('H:i', $this->Interrupcion);
         $interval = date_diff($fechaHoraFinal, $fechaHoraInicio);
         $this->Total = (($interval->h * 60 + $interval->i) - (
             $fechaHoraInt->format('i'))) / 60.0;
->>>>>>> 77890b5568d4447c747dad038d872ff209dbd1ec
         $this->Fecha = date_format(date_create_from_format('d-m-Y', $this->Fecha), 'Y-m-d');
         $this->HoraInicio = date_format($fechaHoraInicio, 'Y-m-d H:i:s');
         $this->HoraFinal = date_format($fechaHoraFinal, 'Y-m-d H:i:s');
