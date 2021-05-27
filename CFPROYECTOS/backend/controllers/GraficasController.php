@@ -3,10 +3,7 @@
 namespace backend\controllers;
 
 use backend\models\Graficas;
-<<<<<<< HEAD
 use Yii;
-=======
->>>>>>> 77890b5568d4447c747dad038d872ff209dbd1ec
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 
@@ -36,22 +33,15 @@ class GraficasController extends \yii\web\Controller{
         $fechas = array();
         for ($i = 0; $i < self::NUM_DIAS; $i++)
             $fechas[$i] = date("d-m-Y", strtotime((self::NUM_DIAS - $i) . " days ago"));
-<<<<<<< HEAD
         $datos = new Graficas();
         $datos = $datos->obtenDatos(self::NUM_DIAS, date('Y-m-d'), Yii::$app->user->id);
         return $this->render('index', ['fechas' => $fechas, 'series' => $datos]);
     }
 
-=======
         $grafica = new Graficas();
         $datos = $grafica->obtenDatos(self::NUM_DIAS, date('Y-m-d'), \Yii::$app->user->id);
         return $this->render('index', ['fechas' => $fechas, 'series' => $datos]);
 
     }
 
-//    public function actionDatos() {
-//
-//    }
-
->>>>>>> 77890b5568d4447c747dad038d872ff209dbd1ec
 }
